@@ -11,7 +11,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://habitodat.netlify.app",
-      /https:\/\/.*\.netlify\.app$/, // Barcha Netlify subdomenlar
+      /https:\/\/.*\.netlify\.app$/  // Barcha Netlify subdomenlar
     ],
     credentials: true,
   })
@@ -544,7 +544,7 @@ app.post("/api/completions/toggle", (req, res) => {
     if (!token.startsWith("user_")) {
       return res.status(401).json({
         success: false,
-        error: "Yaroqsiz token", 
+        error: "Yaroqsiz token",
       });
     }
 
@@ -800,11 +800,13 @@ app.use((req, res) => {
   });
 });
 
+const PORT = 5001;
 app.listen(PORT, () => {
   console.log("=".repeat(60));
   console.log(`🚀 HABIT TRACKER SERVER - ADMIN ONLY USER CREATION`);
   console.log("=".repeat(60));
   console.log(`📡 Port: ${PORT}`);
+  console.log(`🌐 URL: http://localhost:${PORT}`);
   console.log(`💾 Data fayl: ${DATA_FILE}`);
   console.log(`👥 Foydalanuvchilar: ${Object.keys(users).length} ta`);
   console.log(`🔐 Parol bilan himoyalangan`);
@@ -820,7 +822,7 @@ app.listen(PORT, () => {
   console.log(`  Parol: ${ADMIN_PASSWORD}`);
   console.log("=".repeat(60));
   console.log("📋 ADMIN PANEL URL:");
-  console.log(" https://habitodat.netlify.app/admin");
+  console.log("  http://localhost:5173/admin");
   console.log("=".repeat(60));
   console.log("📋 ADMIN API endpoints:");
   console.log("  POST   /api/admin/create-user");
