@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# umumiy
+node_modules/
+.env
+dist/
+
+# frontend
+Frontend/node_modules/
+Frontend/dist/
+
+# backend
+backend/node_modules/
+backend/.env
