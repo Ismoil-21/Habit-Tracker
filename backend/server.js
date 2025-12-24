@@ -544,7 +544,7 @@ app.post("/api/completions/toggle", (req, res) => {
     if (!token.startsWith("user_")) {
       return res.status(401).json({
         success: false,
-        error: "Yaroqsiz token",
+        error: "Yaroqsiz token", 
       });
     }
 
