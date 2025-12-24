@@ -1,9 +1,9 @@
 // services/apiService.js - REAL BACKEND INTEGRATION
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+  import.meta.env.VITE_API_URL || "https://hopeful-liberation-production-3757.up.railway.app/api";
 
-  
+
 class ApiService {
   constructor() {
     this.syncQueue = [];
