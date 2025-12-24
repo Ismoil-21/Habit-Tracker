@@ -6,10 +6,13 @@ const path = require("path");
 
 const app = express();
 
-// CORS
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://habitodat.netlify.app",
+      /https:\/\/.*\.netlify\.app$/, // Barcha Netlify subdomenlar
+    ],
     credentials: true,
   })
 );
